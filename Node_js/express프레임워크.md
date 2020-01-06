@@ -18,3 +18,6 @@ express-generator는 콘솔 명령어이므로 npm 전역 설치가 필요
 - **routes**: 주소별 라우터를 모아둠
 - **view**: 템플릿 파일을 모아둔 곳
 
+## **Reference**
+
+Node.js 교과서 
