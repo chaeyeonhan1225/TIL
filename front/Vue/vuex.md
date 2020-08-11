@@ -93,5 +93,94 @@ export default new Vuex.Store({
 ```javascript
 this.$store.commit('increaseCount');
 ```
+### 📬 페이로드를 가진 커밋
+변이에 대해 payload라고 하는 store.commit에 추가 전달 인자를 사용할 수 있다.<br>
+**store.js**
+```javascript
+  state: {
+    Users: [],
+    me: null,
+  },
+  ...
+  mutations: {
+    setnewUser: (state,payload)=>{
+      state.Users.push(payload);
+    },
+  },
+```
+**⭐️ 변이는 무조건 동기적이어야 한다.**<br>
+비동기성이 상태의 변이와 결합하면 프로그램을 파악하기 매우 어려워지므로 **액션**을 사용해 처리한다.
 
+## 4. actions
+- 상태를 변이시키는 대신 **액션으로 변이에 대한 커밋**을 한다.
+- 작업에는 임의의 비동기 작업이 포함될 수 있다.
 
+```javascript
+ state: {
+    Users: [],
+    me: null,
+  },
+  mutations: {
+    setnewUser: (state,payload)=>{
+      state.Users.push(payload);
+    },
+  },
+  actions: {
+    signUp: (context, payload)=>{
+      context.commit('setnewUser',payload);
+    }
+  },
+```
+commit을 여러 번 호출해야하는 경우 코드를 단순화하기 위해 전달인자 분해를 사용한다.
+```javascript
+signUp: ({ commit }, payload)=>{
+      commit('setnewUser',payload);
+}
+```
+액션은 컴포넌트내에서 <code>store.dispatch()</code> 메소드로 실행할 수 있다.
+```javascript
+onSubmitForm(){
+      if(this.$refs.form.validate()){
+        this.$store.dispatch('login',{
+          email: this.email,
+          password: this.password,
+          nickname: this.nickname,
+        });
+      }
+    }
+```
+액션 내에서도 다른 액션을 실행할 수 있다. 
+```javascript
+actions: {
+    login: ({ commit },payload)=>{
+      commit('setMe',payload);
+    },
+    signUp: ({ commit,dispatch }, payload)=>{
+      commit('setnewUser',payload);
+      dispatch('login',payload);
+    }
+  },
+```
+액션 내에서 **비동기** 작업을 수행할 수 있다.
+```javascript
+onSubmitForm(){
+      if(this.$refs.form.validate()){
+          this.$store.dispatch('signUp',{
+                email: this.email,
+                password: this.password,
+                nickname: this.nickname,
+              },
+          })
+          .then(() => {
+            console.log('회원가입이 완료되었습니다.')
+          })
+          .catch((error) => {
+            console.error(error);  
+          })
+      }
+    }
+```
+<hr>
+
+## 📁 Reference
+[Vuex 공식 문서]("https://vuex.vuejs.org/kr/")
