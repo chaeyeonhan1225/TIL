@@ -23,4 +23,4 @@ JRE = JVM + 라이브러리 API
 자바 프로그램을 개발하려면 JDK를 사용하면 되고, 개발된 프로그램을 실행만 한다면 JRE만 설치하면 된다.
 
 ## 출처
-[이것이 자바다-신용권의 Java 프로그래밍 정복(1)]("https://www.hanbit.co.kr/store/books/look.php?p_code=B1460673937")
+[이것이 자바다-신용권의 Java 프로그래밍 정복(1)](https://www.hanbit.co.kr/store/books/look.php?p_code=B1460673937)

@@ -10,29 +10,32 @@
 - createSever 메서드
 
 인자로 요청에 대한 콜백 함수를 넣는다.
-
-<pre><code>const http = require('http');
+```javascript
+const http = require('http');
 
 http.createSever((req,res)=>{
     // 응답을 보냄
-});</code></pre>
-
+});
+```
 - 서버 연결
 
 createSever 메서드 뒤에 **listen 메서드**를 붙이고 인자로 **포트 번호**와 포트 연결 완료 후 실행될
 **콜백 함수**를 넣어줌 (test용으로 8080을 많이씀)
 
-<pre><code>const http = require('http');
+```javascript
+const http = require('http');
 
 http.createSever((req,res)=>{
     res.write();
 }).listen(8080,()=>{
     console.log('8080포트에서 서버 대기 중');
-});</code></pre>
+});
+```
 
 **listening 이벤트 리스너**를 붙여도 됨
 
-<pre><code>const http = require('http');
+```javascript
+const http = require('http');
 
 const server = http.createSever((req,res)=>{
     res.write('');
@@ -44,18 +47,18 @@ server.on('listening',()=>{
 });
 server.on('error',(error)=>{
     console.error(error);
-}); // error 이벤트 리스너</code></pre>
-
+}); // error 이벤트 리스너
+```
 
 ## **res객체**
 
-1. res.write 
+1. ``res.write ``
  
  첫 번째 인자는 클라이언트로 보낼 데이터
 
  버퍼를 보낼 수도 있다. 여러 번 호출해서 데이터를 여러 개 보낼 수 있다.
 
-2. res.end
+2. ``res.end``
 
  응답을 종료하는 메서드
  
@@ -77,8 +80,8 @@ server.on('error',(error)=>{
 
 포트 번호는 IP 주소 뒤에 콜론(:)과 함께 붙여 사용
 
-<hr>
+---
 
-# **참조**
+## **참조**
 
 Node.js 교과서 

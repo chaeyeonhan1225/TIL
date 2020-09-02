@@ -25,5 +25,5 @@ http는 인터넷에서 데이터를 교환하기 위하여 사용되는 프로�
 
 ---
 ## Reference
-- [프런트엔드 개발자가 알아야하는 HTTP 프로토콜 Part 1 - CAPTAIN PANGYO]("https://joshua1988.github.io/web-development/http-part1/")
+- [프런트엔드 개발자가 알아야하는 HTTP 프로토콜 Part 1 - CAPTAIN PANGYO](https://joshua1988.github.io/web-development/http-part1/)
 - [MDN web docs](https://developer.mozilla.org/ko/docs/Learn/Common_questions/What_is_a_URL)

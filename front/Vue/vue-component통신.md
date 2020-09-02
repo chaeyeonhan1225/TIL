@@ -176,7 +176,7 @@ export default {
 </script>
 ``` 
 ## 📁 Reference
-[Vue.js한국 사용자 모임]("https://vuejs-kr.github.io/jekyll/update/2017/02/13/vuejs-eventbus/")
+[Vue.js한국 사용자 모임](https://vuejs-kr.github.io/jekyll/update/2017/02/13/vuejs-eventbus/)
 
 
-[베이스캠프 티스토리 블로그]("https://webruden.tistory.com/109")
+[베이스캠프 티스토리 블로그](https://webruden.tistory.com/109)

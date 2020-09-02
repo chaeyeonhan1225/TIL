@@ -108,6 +108,6 @@ a 태그로 바뀐다.<br>
 
 ## 📁 Reference
 
-[맨땅에 개발하기 유튜브]("https://youtu.be/aeczJLcr8xc")
+[맨땅에 개발하기 유튜브](https://youtu.be/aeczJLcr8xc)
 
 Vue.js 입문 CAPTAIN PANGYO 장기효 지음

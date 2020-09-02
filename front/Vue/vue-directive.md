@@ -151,7 +151,7 @@ input,select,textarea 태그에만 사용할 수 있다.
 <hr>
 
 ## 📁 Reference
-1. [VELOPERT.LOG 블로그]("https://velopert.com/3095")
+1. [VELOPERT.LOG 블로그](https://velopert.com/3095)
 2. Vue.js 입문 (장기효 지음, 이지스 퍼블리싱)
-3. [Vue.js 공식문서]("https://kr.vuejs.org/v2/guide/")
+3. [Vue.js 공식문서](https://kr.vuejs.org/v2/guide/)
 

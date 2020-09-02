@@ -33,9 +33,7 @@ xhr.status===200</code></pre>
 
 **Reference**
 
-- 네이버 블로그 현재를 즐겨라
-https://blog.naver.com/cpfl0911/221742527608
+- [네이버 블로그 현재를 즐겨라](https://blog.naver.com/cpfl0911/221742527608)
+- [네이버 블로그 Smart Life & Computer Climbing](https://blog.naver.com/wj8606/221206304635)
 
-- 네이버 블로그 Smart Life & Computer Climbing
-https://blog.naver.com/wj8606/221206304635
 

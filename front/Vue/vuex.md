@@ -183,4 +183,4 @@ onSubmitForm(){
 <hr>
 
 ## 📁 Reference
-[Vuex 공식 문서]("https://vuex.vuejs.org/kr/")
+[Vuex 공식 문서](https://vuex.vuejs.org/kr/)

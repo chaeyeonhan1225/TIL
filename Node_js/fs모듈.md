@@ -1,6 +1,6 @@
 # **노드의 fs모듈**
 
-> fs모듈
+## fs모듈
 
 fs 모듈은 파일 시스템에 접근하는 모듈
 
@@ -8,11 +8,12 @@ fs 모듈은 파일 시스템에 접근하는 모듈
 
 > **readFile**
 
-<pre><code>const fs = require('fs');
+```javascript
+const fs = require('fs');
 fs.readFile('파일이름',(err,data)=>{
     // 콜백 함수
 });
-</code></pre>
+```
 
 콜백 함수의 매개변수로 에러 또는 데이터를 받는다.
 
@@ -22,11 +23,12 @@ toString()으로 문자열로 변환해 주면된다.
 
 > **writeFile**
 
-<pre><code>const fs = require('fs');
+```javascript
+const fs = require('fs');
 fs.writeFile('파일이름',(err)=>{
     // 콜백 함수
 });
-</code></pre>
+```
 
 ## Buffer 클래스
 
@@ -41,9 +43,10 @@ fs.writeFile('파일이름',(err)=>{
 
 > createReadStream
 
-<pre><code>const fs = require('fs');
+```javascript
+const fs = require('fs');
 const readStream = fs.createStream('read.txt',{highWaterMark:16});
-</code></pre>
+```
 
 createStream('읽을 파일 경로','옵션객체');
 
@@ -51,10 +54,11 @@ highWaterMark옵션: 버퍼의 크기를 정할 수 있음(바이트 단위)
 
 > readStream
 
-<pre><code>readStream.on('이벤트',(chunk)=>{
+```javascript
+readStream.on('이벤트',(chunk)=>{
     콜백 함수
 })
-</code></pre>
+```
 
 이벤트는 보통 data,end,error를 사용
 
@@ -65,15 +69,13 @@ highWaterMark옵션: 버퍼의 크기를 정할 수 있음(바이트 단위)
 ## **pipe**
 
 스트림끼리 연결하는 것을 '파이핑한다'라고 표현함
-
-<pre><code>const fs = require('fs');
+```javascript
+const fs = require('fs');
 const readStream = fs.createReadStream('읽을 파일의 경로');
 const writeStream = fs.createWriteStream('쓸 파일의 이름');
 readStream.pipe(writeStream);
-</code></pre>
-
-<hr>
-
+```
+---
 ## 참조
 
 node.js 교과서

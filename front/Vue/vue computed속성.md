@@ -53,4 +53,4 @@ computed 속성은
 <hr>
 
 ## 📁 Reference
-[Vue.js 공식 문서]("https://kr.vuejs.org/v2/guide/computed.html")
+[Vue.js 공식 문서](https://kr.vuejs.org/v2/guide/computed.html)
